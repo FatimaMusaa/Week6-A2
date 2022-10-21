@@ -20,6 +20,7 @@ function normalizePort(val) {
     }
 
     if (port >= 0) {
+        
         return port;
     }
 
