@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import {mongoose} from 'mongoose';
 import passportLocalMongoose from 'passport-local-mongoose';
-const {PassportLocalMongoose} = mongoose;
+const {PassportLocalSchema} = mongoose;
 
 const Schema = mongoose.Schema;
 
