@@ -1,17 +1,17 @@
 import { Router } from "express";
-import { displayAboutPage, 
-    displayContactPage, 
+import { displayAboutMePage, 
+    displayContactMePage, 
     displayHomePage, 
-    displayProjectsPage, 
+    displayMyProjectsPage, 
     displayServicesPage } from "../controllers/index.controller.server.js";
 
 const router = Router();
 
 router.get('/', displayHomePage);
 router.get('/home', displayHomePage);
-router.get('/about', displayAboutPage);
-router.get('/projects', displayProjectsPage);
+router.get('/aboutMe', displayAboutMePage);
+router.get('/myProjects', displayMyProjectsPage);
 router.get('/services', displayServicesPage);
-router.get('/contact', displayContactPage);
+router.get('/contactMe', displayContactMePage);
 
 export default router;

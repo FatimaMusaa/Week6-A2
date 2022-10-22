@@ -10,10 +10,10 @@ import {  DisplayMoviesList,
 const router = Router();
 
 router.get('/movie-list', DisplayMoviesList);
-router.get('/movie-add', DisplayMoviesAddPage);
-router.post('/movie-add', ProcessMoviesAddPage);
+router.get('/movie-add',  DisplayMoviesAddPage);
+router.post('/movie-add',  ProcessMoviesAddPage);
 router.post('/movie-edit/:id', ProcessMoviesEditPage);
-router.get('/movie-edit/:id', DisplayMoviesEditPage);
-router.get('/movie-delete/:id', ProcessMoviesDelete);
+router.get('/movie-edit/:id',  DisplayMoviesEditPage);
+router.get('/movie-delete/:id',  ProcessMoviesDelete);
 
 export default router;

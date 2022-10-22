@@ -3,13 +3,13 @@ import  Express  from "express";
 import passport from "passport";
 
 import User from '../models/user.js';
-import { UserDisplayname } from "../utils/index.js";
+import { UserDisplayName } from "../utils/index.js";
 
 export function DisplayLoginPage(req, res, next){
 
     if(!req.user){
 
-        return res.render('index',{title: 'Login', page: 'login', messages: req.flash('loginMessage'), displayName: UserDisplayname(req)});
+        return res.render('index',{title: 'Login', page: 'login', messages: req.flash('loginMessage'), displayName: UserDisplayName(req)});
     }
     return res.redirect('/movie-list');
 }
@@ -17,7 +17,7 @@ export function DisplayRegisterPage(req, res, next){
 
     if(!req.user){
 
-        return res.render('index',{title: 'Register', page: 'register', messages: req.flash('registerMessage'), displayName: UserDisplayname(req) });
+        return res.render('index',{title: 'Register', page: 'register', messages: req.flash('registerMessage'), displayName: UserDisplayName(req) });
     }
 }
 
