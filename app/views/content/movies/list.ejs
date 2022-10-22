@@ -29,6 +29,8 @@
                             <td><%= movies[count].genre %></td>
                             <td><%= movies[count].runtime %></td>
                             
+                            <% if(displayName){ %>
+
                             <td class="text-center col-1">
                                 <a href="/movie-edit/<%= movies[count]._id %>"
                                     class="btn btn-primary btn-sm">
@@ -40,6 +42,7 @@
                                     class="btn btn-danger btn-sm">
                                     <i class="fas fa-trash-alt"></i> Delete</a>
                             </td>
+                            <% } %>
                         </tr>
                     <% } %>
                 </tbody>

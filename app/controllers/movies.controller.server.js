@@ -1,5 +1,6 @@
 import movieModel from '../models/movies.js';
 import { UserDisplayname } from "../utils/index.js";
+
 export function DisplayMoviesList(req, res, next){
     movieModel.find(function(err, moviesCollection) {
         if(err){

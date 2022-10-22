@@ -17,7 +17,7 @@ export function DisplayRegisterPage(req, res, next){
 
     if(!req.user){
 
-        return res.render('index',{title: 'Register', page: 'register', messages: req.flash('registerMessage'),displayName: UserDisplayname(req) });
+        return res.render('index',{title: 'Register', page: 'register', messages: req.flash('registerMessage'), displayName: UserDisplayname(req) });
     }
 }
 
