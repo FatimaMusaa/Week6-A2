@@ -3,7 +3,7 @@ import { Router } from "express";
 import { DisplayLoginPage, 
     DisplayRegisterPage, 
     ProcessLoginPage,
-    ProcessLougoutPage,
+    ProcessLogoutPage,
     ProcessRegisterPage
  } from "../controllers/auth.controller.server.js";
 
@@ -17,6 +17,6 @@ router.get('/register', DisplayRegisterPage);
 
 router.post('/register', ProcessRegisterPage);
 
-router.get('/logout', ProcessLougoutPage);
+router.get('/logout', ProcessLogoutPage);
 
 export default router;

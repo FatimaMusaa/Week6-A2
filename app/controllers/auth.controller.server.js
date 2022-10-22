@@ -3,12 +3,13 @@ import  Express  from "express";
 import passport from "passport";
 
 import User from '../models/user.js';
+import { UserDisplayname } from "../utils/index.js";
 
 export function DisplayLoginPage(req, res, next){
 
     if(!req.user){
 
-        return res.render('index',{title: 'Login', page: 'login', messages: req.flash('loginMessage')});
+        return res.render('index',{title: 'Login', page: 'login', messages: req.flash('loginMessage'), displayName: UserDisplayname(req)});
     }
     return res.redirect('/movie-list');
 }
@@ -16,7 +17,7 @@ export function DisplayRegisterPage(req, res, next){
 
     if(!req.user){
 
-        return res.render('index',{title: 'Register', page: 'register', messages: req.flash('registerMessage')});
+        return res.render('index',{title: 'Register', page: 'register', messages: req.flash('registerMessage'),displayName: UserDisplayname(req) });
     }
 }
 
@@ -78,7 +79,7 @@ export function ProcessRegisterPage(req, res, next){
         })
     })
 }
-export function ProcessLougoutPage(req, res, next){
+export function ProcessLogoutPage(req, res, next){
     req.logOut(function(err){
         if(err){
             console.error(err);
